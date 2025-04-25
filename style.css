@@ -1,0 +1,113 @@
+:root {
+    --blue-primary: #004482;
+    --blue-hover: #126076;
+    --secondary-blue: #001F54;
+    --blue-light: #9AA2FD;
+    --color-white: white;
+    --color-dark: black;
+    /*--color-text-hover: #ddd;*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--secondary-blue);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: var(--color-dark);
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    color: var(--blue-primary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: var(--color-text-hover);
+}
+
+.contact-btn {
+    background-color: var(--blue-primary);
+    color: var(--color-white);
+    padding: 0.6rem 1.4rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: var(--blue-hover);
+    color: var(--color-white);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--color-dark);
+}
+
+/* Estilos para móvil */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-primary);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .nav-menu li a {
+        font-size: 1.2rem;
+    }
+}
