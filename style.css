@@ -20,9 +20,10 @@ body {
 
 /* Estilos para el navbar */
 .navbar {
-    background-color: var(--white);
-    border-bottom: 1px solid var(--secondary-blue);
-    padding: 1.5rem 2rem;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--secondary-blue);
+    color: var(--secondary-blue);
+    padding: 1.8rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,8 +44,10 @@ body {
     gap: 2rem;
 }
 
+
+
 .nav-menu li a {
-    color: var(--blue-primary);
+    /*color: var(--blue-primary);*/
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -55,7 +58,7 @@ body {
 }
 
 .contact-btn {
-    background-color: var(--blue-primary);
+    background-color: var(--secondary-blue);
     color: var(--color-white);
     padding: 0.6rem 1.4rem;
     border-radius: 10px;
@@ -77,30 +80,31 @@ body {
     width: 25px;
     height: 3px;
     margin: 5px;
-    background-color: var(--color-dark);
+    background-color: var(--secondary-blue);
 }
 
 /* Estilos para móvil */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
+        margin-left: auto;
     }
 
     .nav-menu {
         position: fixed;
         top: 0;
-        left: -100%;
-        width: 100%;
+        right: -50%;
+        width: 50%;
         height: 100vh;
-        background-color: var(--color-primary);
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transition: left 0.3s ease;
+        transition: right 0.3s ease;
     }
 
     .nav-menu.active {
-        left: 0;
+        right: 0;
+
     }
 
     .nav-menu li {
@@ -109,5 +113,97 @@ body {
 
     .nav-menu li a {
         font-size: 1.2rem;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 800px;
+    background-image: url('imagenRef.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    margin-top: 80px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 52, 100, 0.404); /* Azul más brillante y menos opaco */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+    padding: 2rem;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    z-index: 2;
+}
+
+.hero-text{
+    margin-top: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero-text h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    margin-bottom: 600px;
+}
+
+/* Responsive Hero */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 80vh;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
     }
 }
