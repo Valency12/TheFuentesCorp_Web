@@ -8,6 +8,14 @@
     /*--color-text-hover: #ddd;*/
 }
 
+
+/*.raleway-<uniquifier> {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }*/
+
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +31,7 @@ body {
     background-color: var(--color-white);
     border-bottom: 2px solid var(--secondary-blue);
     color: var(--secondary-blue);
-    padding: 1.8rem 1.5rem;
+    padding: 1.4rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +39,7 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+    
 }
 
 .logo h1 {
@@ -51,19 +60,28 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    color: var(--secondary-blue);
 }
 
 .nav-menu li a:hover {
     color: var(--color-text-hover);
 }
 
-.contact-btn {
-    background-color: var(--secondary-blue);
+.btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
     color: var(--color-white);
-    padding: 0.6rem 1.4rem;
+    font-weight: bold;
+    background-color: var(--secondary-blue);
     border-radius: 10px;
     transition: all 0.3s ease;
+    padding: 0.6rem 1.0rem;
+    border-color: transparent;
 }
+
 
 .contact-btn:hover {
     background-color: var(--blue-hover);
