@@ -13,43 +13,87 @@
 </head>
 <body>
     <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <h1>The Fuentes Corp</h1>
+    <header id="header" class="header">
+        <div class="container">
+
+            <a href="/" class="logo">
+                <img id="header-img" src="icon.png" alt="Logo">
+            </a>
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#nosotros">NOSOTROS</a></li>
-                <li><a href="#proyectos">PROYECTOS</a></li>
-                <li><a href="#sectores">SECTORES</a></li>
-            </ul>
-            
-            <div class="nav-menu">
+
+            <!--Nav bar-->
+            <nav id="nav-bar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PROYECTOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SECTORES</a></li>
+                </ul>
+            </nav>
+
+            <!--Nav bar buttons-->
+            <div class="header-buttons">
                 <button class="btn">REGISTRARSE</button>
                 <button class="btn">INICIAR SESION</button>
             </div>
-
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <div>
+                <img class="icon-hero" src="images/Logo Vertical png.png"/>
+            </div>
+            
             <div class="hero-text">
-                <h2>Transformando tus <span class="special-words">IDEAS</span> en <span class="special-words">REALIDAD</span></h2>
+                <h2>Transformando tus <br><span class="special-words">IDEAS</span> en <span class="special-words">REALIDAD</span></h2>
                 <p>Soluciones integrales para tus proyectos más ambiciosos</p>
             </div>
+
             <div>
                 <button class="btn">CONTACTANOS</button>
             </div>
         </div>
     </section>
+    <!--NOSOTROS SECTION-->
+    <!--NOSOTROS SECTION-->
+<section id="nosotros" class="nosotros-section">
+    <div class="container-nosotros">
+        <div class="nosotros-header">
+            <h2 class="section-title">ACERCA DE</h2>
+            <p class="section-subtitle">The Fuentes Corporation</p>
+        </div>
+
+        <div class="nosotros-content">
+             
+            <div class="nosotros-image">
+                <img class="nosotros-image" src="images/nosotros.jpg" alt="Imagen de Nosotros">
+            </div>
+            
+           
+            <div class="nosotros-text">
+                <h3>Excelencia en Construcción y Servicios Integrales</h3>
+                <p>
+                    The Fuentes Corporation es una destacada empresa constructora con una sólida trayectoria en el mercado. Con más de 15 años de experiencia en el sector, se ha consolidado como líder en la industria de la construcción, ofreciendo soluciones integrales de alta calidad y adaptadas a las necesidades de sus clientes.
+                </p>
+                <ul>
+                    <li>✔  Nos comprometemos con la excelencia en cada proyecto que ejecutamos.</li>
+                    <li>✔ Nos adaptamos a las necesidades específicas de cada cliente, garantizando resultados personalizados..</li>
+                    <li>✔ Promovemos prácticas sostenibles y respetuosas con el medio ambiente en todos nuestros proyectos.</li>
+                </ul>
+                <p>
+                    Somos una empresa constructora confiable que combina innovación, calidad y atención personalizada para garantizar el éxito de cada proyecto que emprendemos.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <script src="script.js"></script>
 </body>

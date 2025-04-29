@@ -1,16 +1,31 @@
-//Menu hamburguesa
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
+//Menu hamburguesa y sidebar
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger-menu");
+    const sidebar = document.getElementById("sidebar");
+    const closeSidebar = document.getElementById("close-sidebar");
 
-    mobileMenu.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+    hamburger.addEventListener("click", () => {
+        sidebar.classList.add("active");
     });
 
-    // Cerrar el menú al hacer clic en un enlace
-    document.querySelectorAll('.nav-menu li a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
+    closeSidebar.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+
+    // Cerrar sidebar al hacer clic en un enlace
+    document.querySelectorAll(".sidebar .nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+            sidebar.classList.remove("active");
         });
     });
-}); 
+});
+
+//scrolled del header
+document.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 50) { // Cambia el valor según cuándo quieras que se active
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
