@@ -1,5 +1,5 @@
 //Menu hamburguesa y sidebar
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger-menu");
     const sidebar = document.getElementById("sidebar");
     const closeSidebar = document.getElementById("close-sidebar");
@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
             sidebar.classList.remove("active");
         });
     });
+});*/
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const sidebar = document.getElementById('sidebar');
+
+hamburgerMenu.addEventListener('click', () => {
+    sidebar.classList.toggle('active'); // Activa o desactiva el sidebar
 });
 
 //scrolled del header
